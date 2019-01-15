@@ -1,4 +1,10 @@
-#命令流水--cmd flow
+  A json parser,main function:
+  
+  1.query value as string by comma seperated key,like "a.b[1].c"
+  
+  2.generate java source string by json;
+
+#how to use in cmd
 
 D:\proj\tools\target>java -jar json-1.0.0.jar
 
