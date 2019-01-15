@@ -2,8 +2,8 @@
 ----------
 D:\proj\tools\target>java -jar json-1.0.0.jar
 ----------
-  请输入json串(^ 回车结束):
->{
+  ##请输入json串(^ 回车结束):
+->{
     >"firstName": "John",
     >"lastName": "Smith",
     >"gender": "man",
@@ -21,27 +21,27 @@ D:\proj\tools\target>java -jar json-1.0.0.jar
 >}
   ^
 -----------
-请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
+ ##请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
 ----------
-  i
+  -i
   -----------
-请输入查询的键(q-退出查询):
+ ##请输入查询的键(q-退出查询):
 ----------
-  age
+  -age
   ----------
-  age==32
+  -age==32
   -----------
-请输入查询的键(q-退出查询):
+ ##请输入查询的键(q-退出查询):
 ----------
-  q
+  -q
   -----------
-请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
+ ##请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
 ----------
-  g msg
+  -g msg
   -----------
-输入json的java类:
+ ##输入json的java类:
 -----------
->public class msg{
+->public class msg{
 public static class Address{
 private String streetAddress ;
 public String getStreetAddress(){
@@ -132,16 +132,16 @@ this.phoneNumbers=phoneNumbers;
 }
 >}
 -----------
-请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
+ ##请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
   ----------
-  f msg2
+  -f msg2
   -----------
-写入成功:msg2.java
+ -写入成功:msg2.java
   ----------
-请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
+ ##请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
   ----------
-^
+-^
   -----------
-Disconnected from the target VM, address: '127.0.0.1:62476', transport: 'socket'
+ ##Disconnected from the target VM, address: '127.0.0.1:62476', transport: 'socket'
 ----------
-Process finished with exit code 0
+ ##Process finished with exit code 0
