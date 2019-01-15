@@ -1,22 +1,22 @@
 #命令举例
 1.D:\proj\tools\target>java -jar json-1.0.0.jar
   1.请输入json串(^ 回车结束):
-{
-    "firstName": "John",
-    "lastName": "Smith",
-    "gender": "man",
-    "age": 32,
-    "address": {
-        "streetAddress": "21 2nd Street",
-        "city": "New York",
-        "state": "NY",
-        "postalCode": "10021"
-    },
-    "phoneNumbers": [
-        { "type": "home", "number": "212 555-1234" },
-        { "type": "fax", "number": "646 555-4567" }
-    ]
-}
+>{
+    >"firstName": "John",
+    >"lastName": "Smith",
+    >"gender": "man",
+    >"age": 32,
+    >"address": {
+        >"streetAddress": "21 2nd Street",
+        >"city": "New York",
+        >"state": "NY",
+        >"postalCode": "10021"
+    >},
+    >"phoneNumbers": [
+        >{ "type": "home", "number": "212 555-1234" },
+        >{ "type": "fax", "number": "646 555-4567" }
+    >]
+>}
   1.^
 
 1.请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
