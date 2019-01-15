@@ -1,4 +1,5 @@
 #命令举例
+----------
 1.D:\proj\tools\target>java -jar json-1.0.0.jar
   1.请输入json串(^ 回车结束):
 >{
@@ -18,18 +19,23 @@
     >]
 >}
   1.^
-
+-----------
 1.请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
   1.i
+  -----------
 1.请输入查询的键(q-退出查询):
   1.age
   1.age==32
+  -----------
 1.请输入查询的键(q-退出查询):
   1.q
+  -----------
 1.请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
   1.g msg
+  -----------
 1.输入json的java类:
-public class msg{
+-----------
+>public class msg{
 public static class Address{
 private String streetAddress ;
 public String getStreetAddress(){
@@ -118,13 +124,15 @@ return this.phoneNumbers;
 public void setPhoneNumbers(List<PhoneNumbers> phoneNumbers){
 this.phoneNumbers=phoneNumbers;
 }
-}
-
+>}
+-----------
 1.请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
   1.f msg2
+  -----------
 1.写入成功:msg2.java
 1.请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
 1.^
+  -----------
 1.Disconnected from the target VM, address: '127.0.0.1:62476', transport: 'socket'
 
 1.Process finished with exit code 0
