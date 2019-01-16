@@ -52,8 +52,7 @@ q
 >请输入要执行的命令:i->查询,g 类名->生成代码并显示,f 文件名->生成代码并写入文件,^->退出
 
 g msg
->输入json的java类:
- 
+
 > public class msg {
      public static class Address {
          private String streetAddress;
