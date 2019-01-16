@@ -66,7 +66,6 @@ public class CliEntry {
             cn = la[1];
         }
         String r = jb.toSrc(cn);
-        System.out.println("输入json的java类:");
         System.out.println(r);
     }
 
