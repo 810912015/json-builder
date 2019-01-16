@@ -28,20 +28,23 @@ public class AntlrJsonBuilder implements JsonBuilder {
 
     private boolean shouldDig;
 
-    private AntlrJsonBuilder(String s,boolean shouldDig) {
+    AntlrJsonBuilder(String s, boolean shouldDig) {
         this.json = s;
         maker = new SrcMaker();
-        this.model=parse(this.json);
-        this.shouldDig=shouldDig;
-        if(shouldDig){
+        this.model = parse(this.json);
+        this.shouldDig = shouldDig;
+        if (shouldDig) {
             this.digIn();
         }
     }
-    private AntlrJsonBuilder(String s){
-        this(s,true);
+
+    AntlrJsonBuilder(String s) {
+        this(s, true);
     }
+
     /**
      * jsonBuilder factory
+     *
      * @param json source json string
      * @return
      */
@@ -51,13 +54,15 @@ public class AntlrJsonBuilder implements JsonBuilder {
 
     /**
      * jsonBuilder factory
-     * @param json source json string
-     * @param shouldDig  is the json string contains json as string field
+     *
+     * @param json      source json string
+     * @param shouldDig is the json string contains json as string field
      * @return
      */
-    public static JsonBuilder build(String json,boolean shouldDig) {
-        return new AntlrJsonBuilder(json,shouldDig);
+    public static JsonBuilder build(String json, boolean shouldDig) {
+        return new AntlrJsonBuilder(json, shouldDig);
     }
+
     @Override
     public String toSrc(String className) {
         try {
@@ -119,7 +124,7 @@ public class AntlrJsonBuilder implements JsonBuilder {
      */
     @Override
     public void digIn() {
-        if(!this.shouldDig){
+        if (!this.shouldDig) {
             return;
         }
         dig(this.model);
@@ -129,9 +134,14 @@ public class AntlrJsonBuilder implements JsonBuilder {
         for (String k : m.keySet()) {
             Object v = m.get(k);
             if (v instanceof String) {
+                String vs = (String) v;
+                if (!(vs.startsWith("{") || vs.startsWith("[")
+                        || vs.startsWith("\"{") || vs.startsWith("\"["))) {
+                    continue;
+                }
                 Map<String, Object> m1 = null;
                 try {
-                    String uv = StringEscapeUtils.unescapeJava((String) v);
+                    String uv = StringEscapeUtils.unescapeJava(vs);
                     m1 = parse(uv);
                 } catch (Exception e) {
                     continue;
@@ -146,6 +156,7 @@ public class AntlrJsonBuilder implements JsonBuilder {
             }
         }
     }
+
     public Map<String, Object> parse(String json) {
         try {
             ParseTree pt;
